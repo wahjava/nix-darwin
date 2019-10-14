@@ -65,7 +65,7 @@ in
     services.unbound.forwardAddresses = mkOption {
       type = types.listOf types.str;
       default = [];
-      example = literalExample "pkgs.unbound";
+      example = literalExample "[ \"8.8.8.8\" \"1.1.1.1\" ]";
       description = "List of resolvers to forward queries to";
     };
 
