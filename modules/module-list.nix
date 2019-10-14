@@ -48,6 +48,7 @@
   ./services/skhd
   ./services/synapse-bt.nix
   ./services/synergy
+  ./services/unbound.nix
   ./programs/bash
   ./programs/fish.nix
   ./programs/gnupg.nix
