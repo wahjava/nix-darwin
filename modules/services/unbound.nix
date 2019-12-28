@@ -127,12 +127,11 @@ in
       path = [ config.environment.systemPath ];
       script = ''
         [ -d ${stateDir} ] || mkdir ${stateDir}
-        cp ${confFile} ${stateDir}/unbound.conf
         ${optionalString cfg.enableRootTrustAnchor ''
           ${pkgs.unbound}/bin/unbound-anchor -a ${rootTrustAnchorFile} || echo "Root anchor updated!"
         ''}
         chown -R unbound:unbound ${stateDir}
-      exec ${pkgs.unbound}/bin/unbound -d -c ${stateDir}/unbound.conf
+      exec ${pkgs.unbound}/bin/unbound -d -c ${confFile}
       '';
       serviceConfig.KeepAlive = true;
     };
