@@ -94,7 +94,7 @@ in
     };
 
     services.unbound.includeFile = mkOption {
-      type = types.str;
+      type = types.path;
       default = "";
       description = "Include configuration from file";
     };
