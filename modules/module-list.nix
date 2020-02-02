@@ -39,6 +39,7 @@
   ./services/kwm
   ./services/mail/offlineimap.nix
   ./services/mopidy.nix
+  ./services/nginx
   ./services/nix-daemon.nix
   ./services/nix-gc
   ./services/ofborg
